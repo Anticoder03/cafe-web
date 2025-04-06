@@ -42,7 +42,7 @@ Cafe-Website/
 ## 📸 Preview
 
 > A cozy, modern design perfect for small cafes or coffee shops.  
-> **Demo Link:** [\[Coming Soon\]](https://cafe-web-anticoder.netlify.app/)
+> **Demo Link:** [\[Coffee Haven\]](https://cafe-web-anticoder.netlify.app/)
 
 ## 📬 Contact
 
