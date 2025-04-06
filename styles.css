@@ -1,0 +1,197 @@
+/* Custom Colors */
+:root {
+    --color-brown: #5C4033;
+    --color-cream: #FFF8E7;
+    --color-copper: #B87333;
+}
+
+/* Tailwind Custom Colors */
+.bg-brown { background-color: var(--color-brown); }
+.bg-cream { background-color: var(--color-cream); }
+.bg-copper { background-color: var(--color-copper); }
+.text-brown { color: var(--color-brown); }
+.text-cream { color: var(--color-cream); }
+.text-copper { color: var(--color-copper); }
+.border-brown { border-color: var(--color-brown); }
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+.animate-fade-in-delay {
+    animation: fadeIn 1s ease-out 0.3s both;
+}
+
+.animate-fade-in-delay-2 {
+    animation: fadeIn 1s ease-out 0.6s both;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Styles */
+.sketchfab-embed-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-out;
+}
+
+.sketchfab-embed-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    transition: all 0.3s ease-out;
+}
+
+/* Mobile Menu Transition */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Form Focus States */
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-copper);
+}
+
+/* Loading Screen */
+#loading-screen {
+    transition: opacity 0.5s ease-out;
+}
+
+/* Hover Effects */
+.hover\:shadow-xl:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* 3D Model Container Styles */
+.model-container {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+#coffee-cup-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: transparent;
+}
+
+.loading-indicator {
+    transition: opacity 0.5s ease-out;
+    background-color: rgba(92, 64, 51, 0.8);
+    backdrop-filter: blur(5px);
+    border-radius: 1rem;
+}
+
+.loading-indicator div {
+    color: var(--color-cream);
+    font-weight: 500;
+}
+
+/* Hover Effects */
+.model-container:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-out;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Scroll Animation */
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.model-container {
+    animation: float 6s ease-in-out infinite;
+}
+
+.model-container:hover {
+    animation-play-state: paused;
+}
+
+/* 3D Model Container */
+#coffee-cup-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: transparent;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+}
+
+#coffee-cup-container:hover {
+    transform: scale(1.02);
+}
+
+#coffee-cup-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.loading-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    transition: opacity 0.5s ease;
+}
+
+.loading-indicator div {
+    text-align: center;
+    color: #4A2C2A;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Responsive adjustments for 3D model */
+@media (max-width: 768px) {
+    #coffee-cup-container {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    #coffee-cup-container {
+        height: 250px;
+    }
+} 

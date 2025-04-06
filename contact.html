@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Coffee Haven</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-[Poppins] bg-cream">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-brown backdrop-blur-sm z-40">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="text-cream text-2xl font-bold">Coffee Haven</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-cream hover:text-copper transition-colors">Home</a>
+                    <a href="menu.html" class="text-cream hover:text-copper transition-colors">Menu</a>
+                    <a href="about.html" class="text-cream hover:text-copper transition-colors">About</a>
+                    <a href="contact.html" class="text-cream hover:text-copper transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden text-cream" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-4 py-2 space-y-2 bg-brown">
+                <a href="index.html" class="block text-cream hover:text-copper transition-colors">Home</a>
+                <a href="menu.html" class="block text-cream hover:text-copper transition-colors">Menu</a>
+                <a href="about.html" class="block text-cream hover:text-copper transition-colors">About</a>
+                <a href="contact.html" class="block text-cream hover:text-copper transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <section class="pt-32 pb-16 bg-brown text-cream">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+            <p class="text-lg text-cream/80 max-w-2xl mx-auto">
+                Have questions or feedback? We'd love to hear from you. Reach out to us through any of the methods below.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-16 bg-cream">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <!-- Contact Card 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow">
+                    <div class="text-copper text-4xl mb-4">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brown mb-2">Visit Us</h3>
+                    <p class="text-brown/70 mb-4">123 Coffee Street, Brew City</p>
+                    <a href="https://maps.google.com" target="_blank" class="text-copper hover:text-brown transition-colors">
+                        Get Directions <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+                <!-- Contact Card 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow">
+                    <div class="text-copper text-4xl mb-4">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brown mb-2">Call Us</h3>
+                    <p class="text-brown/70 mb-4">(555) 123-4567</p>
+                    <a href="tel:+15551234567" class="text-copper hover:text-brown transition-colors">
+                        Call Now <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+                <!-- Contact Card 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow">
+                    <div class="text-copper text-4xl mb-4">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brown mb-2">Email Us</h3>
+                    <p class="text-brown/70 mb-4">info@coffeehaven.com</p>
+                    <a href="mailto:info@coffeehaven.com" class="text-copper hover:text-brown transition-colors">
+                        Send Email <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold text-brown mb-6">Send Us a Message</h2>
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-brown font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-brown/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-copper" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-brown font-medium mb-2">Your Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-brown/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-copper" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-brown font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-brown/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-copper" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-brown font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-brown/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-copper" required></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="bg-copper text-cream px-6 py-3 rounded-full hover:bg-copper/90 transition-colors w-full md:w-auto">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Map and Hours -->
+                <div class="space-y-8">
+                    <!-- Map -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h2 class="text-2xl font-bold text-brown mb-6">Find Us</h2>
+                        <div class="h-64 bg-brown/20 rounded-lg overflow-hidden">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968482413!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855a648a9cb%3A0x41095f7fb09e0a0!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1647043439265!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Hours -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h2 class="text-2xl font-bold text-brown mb-6">Hours of Operation</h2>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-brown/70">Monday - Friday</span>
+                                <span class="font-medium text-brown">7am - 8pm</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-brown/70">Saturday</span>
+                                <span class="font-medium text-brown">8am - 9pm</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-brown/70">Sunday</span>
+                                <span class="font-medium text-brown">8am - 6pm</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-brown text-cream">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- FAQ Item 1 -->
+                <div class="bg-brown/50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Do you offer catering services?</h3>
+                    <p class="text-cream/80">
+                        Yes, we offer catering services for events of all sizes. Please contact us at least 48 hours in advance to discuss your needs.
+                    </p>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="bg-brown/50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Can I make a reservation?</h3>
+                    <p class="text-cream/80">
+                        We accept reservations for groups of 6 or more. Please call us or use the contact form to make a reservation.
+                    </p>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="bg-brown/50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Do you have WiFi?</h3>
+                    <p class="text-cream/80">
+                        Yes, we offer free WiFi for all our customers. The password is available at the counter.
+                    </p>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="bg-brown/50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Are you hiring?</h3>
+                    <p class="text-cream/80">
+                        We're always looking for passionate individuals to join our team. Please visit our careers page or contact us for more information.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-cream">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-brown mb-6">Stay Connected</h2>
+            <p class="text-lg text-brown/80 mb-8 max-w-2xl mx-auto">
+                Subscribe to our newsletter to receive updates on seasonal specials, events, and promotions.
+            </p>
+            <form class="max-w-md mx-auto">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 border border-brown/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-copper">
+                    <button type="submit" class="bg-copper text-cream px-6 py-3 rounded-lg hover:bg-copper/90 transition-colors">
+                        Subscribe
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brown text-cream py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Coffee Haven</h3>
+                    <p class="text-cream/70 mb-4">Brewed to perfection, served with love.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-copper hover:text-cream transition-colors"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-copper hover:text-cream transition-colors"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-copper hover:text-cream transition-colors"><i class="fab fa-twitter text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-cream/70 hover:text-copper transition-colors">Home</a></li>
+                        <li><a href="menu.html" class="text-cream/70 hover:text-copper transition-colors">Menu</a></li>
+                        <li><a href="about.html" class="text-cream/70 hover:text-copper transition-colors">About</a></li>
+                        <li><a href="contact.html" class="text-cream/70 hover:text-copper transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Hours</h3>
+                    <ul class="space-y-2 text-cream/70">
+                        <li>Monday - Friday: 7am - 8pm</li>
+                        <li>Saturday: 8am - 9pm</li>
+                        <li>Sunday: 8am - 6pm</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-cream/70">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-copper mr-2"></i>
+                            123 Coffee Street, Brew City
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-copper mr-2"></i>
+                            (555) 123-4567
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-copper mr-2"></i>
+                            info@coffeehaven.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-cream/20 mt-8 pt-8 text-center">
+                <p class="mb-4">© 2024 Coffee Haven. All rights reserved.</p>
+                <p class="text-cream/70">
+                    Developed and maintained by 
+                    <a href="https://github.com/Anticoder03" target="_blank" class="text-copper hover:text-cream transition-colors">
+                        Anticoder03
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

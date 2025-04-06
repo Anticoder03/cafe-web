@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Haven | Brewed to Perfection</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-[Poppins] bg-cream">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="fixed inset-0 bg-brown z-50 flex items-center justify-center">
+        <div class="text-cream text-2xl">Loading...</div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-brown backdrop-blur-sm z-40">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="text-cream text-2xl font-bold">Coffee Haven</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-cream hover:text-copper transition-colors">Home</a>
+                    <a href="menu.html" class="text-cream hover:text-copper transition-colors">Menu</a>
+                    <a href="about.html" class="text-cream hover:text-copper transition-colors">About</a>
+                    <a href="contact.html" class="text-cream hover:text-copper transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden text-cream" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-4 py-2 space-y-2 bg-brown">
+                <a href="index.html" class="block text-cream hover:text-copper transition-colors">Home</a>
+                <a href="menu.html" class="block text-cream hover:text-copper transition-colors">Menu</a>
+                <a href="about.html" class="block text-cream hover:text-copper transition-colors">About</a>
+                <a href="contact.html" class="block text-cream hover:text-copper transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left">
+                <h1 class="text-4xl md:text-6xl font-bold text-brown mb-4 animate-fade-in">
+                    Brewed to Perfection
+                </h1>
+                <p class="text-lg text-brown/80 mb-8 animate-fade-in-delay">
+                    Experience the perfect blend of tradition and innovation
+                </p>
+                <a href="menu.html" class="bg-copper text-cream px-8 py-3 rounded-full hover:bg-copper/90 transition-colors animate-fade-in-delay-2">
+                    Explore Menu
+                </a>
+            </div>
+            <div class="md:w-1/2 mt-8 md:mt-0">
+                <div class="hero-image-container w-full h-96 relative overflow-hidden rounded-lg shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb" alt="Coffee Haven" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brown/70 to-transparent flex items-end">
+                        <div class="p-6 text-cream">
+                            <h3 class="text-2xl font-bold">Welcome to Coffee Haven</h3>
+                            <p class="text-cream/90">Where every cup tells a story</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="py-20 bg-brown text-cream">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Why Choose Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-brown/50 p-6 rounded-lg text-center hover:bg-brown/70 transition-colors">
+                    <i class="fas fa-coffee text-4xl text-copper mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Premium Beans</h3>
+                    <p class="text-cream/80">We source the finest coffee beans from around the world and roast them in-house.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-brown/50 p-6 rounded-lg text-center hover:bg-brown/70 transition-colors">
+                    <i class="fas fa-mug-hot text-4xl text-copper mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Expert Baristas</h3>
+                    <p class="text-cream/80">Our skilled baristas craft each cup with precision and passion.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-brown/50 p-6 rounded-lg text-center hover:bg-brown/70 transition-colors">
+                    <i class="fas fa-heart text-4xl text-copper mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Cozy Atmosphere</h3>
+                    <p class="text-cream/80">Enjoy your coffee in our warm, inviting space designed for comfort.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Preview Section -->
+    <section class="py-20 bg-cream">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-brown text-center mb-12">Our Menu Highlights</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Menu Item 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="./img/coffee1.png" alt="Espresso" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-brown mb-2">Classic Espresso</h3>
+                        <p class="text-brown/70 mb-4">Rich and bold, our signature espresso blend</p>
+                        <span class="text-copper font-bold">200 Rs.</span>
+                    </div>
+                </div>
+                <!-- Menu Item 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d" alt="Cappuccino" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-brown mb-2">Cappuccino</h3>
+                        <p class="text-brown/70 mb-4">Perfectly balanced espresso with steamed milk</p>
+                        <span class="text-copper font-bold">$4.99</span>
+                    </div>
+                </div>
+                <!-- Menu Item 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc" alt="Latte" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-brown mb-2">Caramel Latte</h3>
+                        <p class="text-brown/70 mb-4">Smooth espresso with caramel and milk</p>
+                        <span class="text-copper font-bold">$5.99</span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="menu.html" class="bg-copper text-cream px-8 py-3 rounded-full hover:bg-copper/90 transition-colors">
+                    View Full Menu
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-brown text-cream">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">What Our Customers Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-brown/50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-copper mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-cream/80">5.0</span>
+                    </div>
+                    <p class="text-cream/80 mb-4">"The best coffee I've ever had! The atmosphere is cozy and the staff is friendly."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-cream/60 text-sm">Regular Customer</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-brown/50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-copper mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-cream/80">5.0</span>
+                    </div>
+                    <p class="text-cream/80 mb-4">"I love their seasonal specials. The baristas are knowledgeable and always make great recommendations."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-bold">Michael Chen</h4>
+                            <p class="text-cream/60 text-sm">Coffee Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-brown/50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-copper mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-cream/80">4.5</span>
+                    </div>
+                    <p class="text-cream/80 mb-4">"Great place to work remotely. Fast wifi, plenty of outlets, and amazing coffee."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-bold">Emily Rodriguez</h4>
+                            <p class="text-cream/60 text-sm">Digital Nomad</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-cream">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-brown mb-6">Join Us Today</h2>
+            <p class="text-lg text-brown/80 mb-8 max-w-2xl mx-auto">
+                Experience the perfect cup of coffee in a warm, inviting atmosphere. Visit us today or order online.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="contact.html" class="bg-copper text-cream px-8 py-3 rounded-full hover:bg-copper/90 transition-colors">
+                    Contact Us
+                </a>
+                <a href="menu.html" class="bg-brown text-cream px-8 py-3 rounded-full hover:bg-brown/90 transition-colors">
+                    View Menu
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brown text-cream py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Coffee Haven</h3>
+                    <p class="text-cream/70 mb-4">Brewed to perfection, served with love.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-copper hover:text-cream transition-colors"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-copper hover:text-cream transition-colors"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-copper hover:text-cream transition-colors"><i class="fab fa-twitter text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-cream/70 hover:text-copper transition-colors">Home</a></li>
+                        <li><a href="menu.html" class="text-cream/70 hover:text-copper transition-colors">Menu</a></li>
+                        <li><a href="about.html" class="text-cream/70 hover:text-copper transition-colors">About</a></li>
+                        <li><a href="contact.html" class="text-cream/70 hover:text-copper transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Hours</h3>
+                    <ul class="space-y-2 text-cream/70">
+                        <li>Monday - Friday: 7am - 8pm</li>
+                        <li>Saturday: 8am - 9pm</li>
+                        <li>Sunday: 8am - 6pm</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-cream/70">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-copper mr-2"></i>
+                            123 Coffee Street, Brew City
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-copper mr-2"></i>
+                            (555) 123-4567
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-copper mr-2"></i>
+                            info@coffeehaven.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-cream/20 mt-8 pt-8 text-center">
+                <p class="mb-4">© 2024 Coffee Haven. All rights reserved.</p>
+                <p class="text-cream/70">
+                    Developed and maintained by 
+                    <a href="https://github.com/Anticoder03" target="_blank" class="text-copper hover:text-cream transition-colors">
+                        Anticoder03
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
